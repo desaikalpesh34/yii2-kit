@@ -13,10 +13,10 @@ class m150625_214101_roles extends Migration
         $this->auth->add($user);
 
         $sub_admin = $this->auth->createRole(User::ROLE_SUB_ADMIN);
-        $this->auth->add($user);
+        $this->auth->add($sub_admin);
 
         $vendor = $this->auth->createRole(User::ROLE_VENDOR);
-        $this->auth->add($user);
+        $this->auth->add($vendor);
 
         $admin = $this->auth->createRole(User::ROLE_ADMINISTRATOR);
         $this->auth->add($admin);

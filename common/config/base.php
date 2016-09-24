@@ -9,6 +9,7 @@ $config = [
     'modules' => [
         'admin' => [
             'class' => 'mdm\admin\Module',
+            'layout' => 'left-menu',
         ],
     ],
     'components' => [

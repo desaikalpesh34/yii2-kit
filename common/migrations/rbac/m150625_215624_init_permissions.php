@@ -21,16 +21,16 @@ class m150625_215624_init_permissions extends Migration
         $this->auth->addChild($admin, $admin_permission);
 
         $alladminpemissin = $this->auth->createPermission('/*');
-        $this->auth->add($admin_permission);
+        $this->auth->add($alladminpemissin);
         $this->auth->addChild($admin_permission, $alladminpemissin);
 
         $sub_admin_permission = $this->auth->createPermission('subAdminPermission');
         $this->auth->add($sub_admin_permission);
         $this->auth->addChild($sub_admin, $sub_admin_permission);
 
-        $pagePermission = $this->auth->createPermission('page/*');
+        $pagePermission = $this->auth->createPermission('/page/*');
         $this->auth->add($pagePermission);
-        $this->auth->addChild($sub_admin, $pagePermission);
+        $this->auth->addChild($sub_admin_permission, $pagePermission);
     }
 
     public function down()
