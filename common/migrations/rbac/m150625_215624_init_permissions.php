@@ -27,10 +27,51 @@ class m150625_215624_init_permissions extends Migration
         $sub_admin_permission = $this->auth->createPermission('subAdminPermission');
         $this->auth->add($sub_admin_permission);
         $this->auth->addChild($sub_admin, $sub_admin_permission);
-
+       
+        //manage page
         $pagePermission = $this->auth->createPermission('/page/*');
         $this->auth->add($pagePermission);
         $this->auth->addChild($sub_admin_permission, $pagePermission);
+        
+        //see dashboard
+        $timeLinePermission = $this->auth->createPermission('/timeline-event/index');
+        $this->auth->add($timeLinePermission);
+        $this->auth->addChild($sub_admin_permission, $timeLinePermission); 
+
+        //manage article
+        $articlePermission = $this->auth->createPermission('/article/*');
+        $this->auth->add($articlePermission);
+        $this->auth->addChild($sub_admin_permission, $articlePermission); 
+
+        //manage article category
+        $articleCategoryPermission = $this->auth->createPermission('/article-category/*');
+        $this->auth->add($articleCategoryPermission);
+        $this->auth->addChild($sub_admin_permission, $articleCategoryPermission); 
+
+        //manage own account
+        $accountPermission = $this->auth->createPermission('/sign-in/*');
+        $this->auth->add($accountPermission);
+        $this->auth->addChild($sub_admin_permission, $accountPermission);
+
+        //manage i18n message translation
+        $messagePermission = $this->auth->createPermission('/i18n/*');
+        $this->auth->add($messagePermission);
+        $this->auth->addChild($sub_admin_permission, $messagePermission);
+
+        //manage Cache
+        $cachePermission = $this->auth->createPermission('/cache/*');
+        $this->auth->add($cachePermission);
+        $this->auth->addChild($sub_admin_permission, $cachePermission);
+
+        //view system-information 
+        $systemViewPermission = $this->auth->createPermission('/system-information/*');
+        $this->auth->add($systemViewPermission);
+        $this->auth->addChild($sub_admin_permission, $systemViewPermission);
+
+         //manage Log
+        $logPermission = $this->auth->createPermission('/log/*');
+        $this->auth->add($logPermission);
+        $this->auth->addChild($sub_admin_permission, $logPermission);
     }
 
     public function down()
@@ -40,5 +81,13 @@ class m150625_215624_init_permissions extends Migration
         $this->auth->remove($this->auth->getPermission('subAdminPermission'));
         $this->auth->remove($this->auth->getPermission('/*'));
         $this->auth->remove($this->auth->getPermission('page/*'));
+        $this->auth->remove($this->auth->getPermission('/timeline-event/index'));
+        $this->auth->remove($this->auth->getPermission('/article/*'));
+        $this->auth->remove($this->auth->getPermission('article-category/*'));
+        $this->auth->remove($this->auth->getPermission('/sign-in/*'));
+        $this->auth->remove($this->auth->getPermission('/i18n/*'));
+        $this->auth->remove($this->auth->getPermission('/cache/*'));
+        $this->auth->remove($this->auth->getPermission('/system-information/*'));
+        $this->auth->remove($this->auth->getPermission('/log/*'));
     }
 }
