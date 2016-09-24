@@ -1,0 +1,48 @@
+Message-ID: <d5420b26f8bee81fb28fcaac52905129@localhost>
+Date: Mon, 22 Aug 2016 06:56:12 +0200
+Subject: Password reset for Runmile
+From: kalpesh.tecksky@gmail.com
+To: seller1@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1471841772_121a28e1317145a0a52d7c91c46f6329_=_"
+
+
+--_=_swift_v4_1471841772_121a28e1317145a0a52d7c91c46f6329_=_
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello seller1,
+
+Follow the link below to reset your password:
+
+http://localhost/yii2/runmile1/api/web/user/sign-in/reset-password?tok=
+en=3DSjMR1ObbdK2_l4Es0FdsZYtNqBnYcbtxIyOrzMdR
+
+--_=_swift_v4_1471841772_121a28e1317145a0a52d7c91c46f6329_=_
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.=
+org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF=
+-8" />
+    <title></title>
+    </head>
+<body>
+
+       =20
+Hello seller1,
+
+Follow the link below to reset your password:
+
+<a href=3D"http://localhost/yii2/runmile1/api/web/user/sign-in/reset-pas=
+sword?token=3DSjMR1ObbdK2_l4Es0FdsZYtNqBnYcbtxIyOrzMdR">http://localhost/y=
+ii2/runmile1/api/web/user/sign-in/reset-password?token=3DSjMR1ObbdK2_l4Es0=
+FdsZYtNqBnYcbtxIyOrzMdR</a>    </body>
+</html>
+
+
+--_=_swift_v4_1471841772_121a28e1317145a0a52d7c91c46f6329_=_--

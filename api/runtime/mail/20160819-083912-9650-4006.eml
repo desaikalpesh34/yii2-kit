@@ -1,0 +1,264 @@
+Message-ID: <7ec6c037ec60d2c67b43fc8baa5c94f0@localhost>
+Date: Fri, 19 Aug 2016 08:39:12 +0200
+Subject: Your Vehicle Inquiry is Confimed with Runmile
+From: kalpesh.tecksky@gmail.com
+To: bfdjjnnfdg@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1471588752_7ee3d26908a439a2bda42e554bd2b2b3_=_"
+
+
+--_=_swift_v4_1471588752_7ee3d26908a439a2bda42e554bd2b2b3_=_
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Your vehicle inquiry is confirmed with  Runmile
+Thank you for using our service
+Your Detail
+
+Name
+name
+
+Email
+bfdjjnnfdg@gmail.com
+
+Phone
+phone
+
+Title
+title
+
+Description
+description
+
+REquest Time
+Aug 19, 2016, 8:39:12 AM
+
+Vehicle Detail.
+
+Name
+name
+
+Fuel Type
+fuel_type
+
+Brand
+brand
+
+Version
+version
+
+Make Year
+2012
+
+Year Registration
+2006
+
+no_of_owners
+5
+
+km_driven
+5512
+
+puc
+puc6694
+
+rigister_rto
+baroda
+
+insurance_valid
+0000-00-00
+
+price
+665
+
+additonal_info
+additonal_info
+
+capacity
+225
+
+is_new
+1
+
+Vehicle Galary
+
+http://localhost/yii2/runmile1/storage/web/vehicle/
+
+Vehicle Contact Detail
+
+company_name
+company_name
+
+firstname
+firstname
+
+lastname
+lastname
+
+email
+sfdsf@gmail.com
+
+mobile
+mobile
+
+--_=_swift_v4_1471588752_7ee3d26908a439a2bda42e554bd2b2b3_=_
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.=
+org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF=
+-8" />
+    <title></title>
+    </head>
+<body>
+
+        <h2>Your vehicle inquiry is confirmed with  Runmile</h2>
+<h2>Thank you for using our service</h2>
+<p>Your Detail</p>
+<table>
+<tr>
+  <td>Name</td>
+  <td>name</td>
+</tr>
+<tr>
+  <td>Email</td>
+  <td>bfdjjnnfdg@gmail.com</td>
+</tr>
+<tr>
+  <td>Phone</td>
+  <td>phone</td>
+</tr>
+<tr>
+  <td>Title</td>
+  <td>title</td>
+</tr>
+<tr>
+  <td>Description</td>
+  <td>description</td>
+</tr>
+<tr>
+  <td>REquest Time</td>
+  <td>Aug 19, 2016, 8:39:12 AM</td>
+</tr>
+</table>
+
+
+<p>Vehicle Detail</p>.
+<table>
+<tr>
+  <td>Name</td>
+  <td>name</td>
+</tr>
+<tr>
+  <td>Fuel Type</td>
+  <td>fuel_type</td>
+</tr>
+<tr>
+  <td>Brand</td>
+  <td>brand</td>
+</tr>
+
+<tr>
+  <td>Version</td>
+  <td>version</td>
+</tr>
+
+<tr>
+  <td>Make Year</td>
+  <td>2012</td>
+</tr>
+
+<tr>
+  <td>Year Registration</td>
+  <td>2006</td>
+</tr>
+
+<tr>
+  <td>no_of_owners</td>
+  <td>5</td>
+</tr>
+
+<tr>
+  <td>km_driven</td>
+  <td>5512</td>
+</tr>
+
+<tr>
+  <td>puc</td>
+  <td>puc6694</td>
+</tr>
+
+<tr>
+  <td>rigister_rto</td>
+  <td>baroda</td>
+</tr>
+
+<tr>
+  <td>insurance_valid</td>
+  <td>0000-00-00</td>
+</tr>
+
+<tr>
+  <td>price</td>
+  <td>665</td>
+</tr>
+
+<tr>
+  <td>additonal_info</td>
+  <td>additonal_info</td>
+</tr>
+
+<tr>
+  <td>capacity</td>
+  <td>225</td>
+</tr>
+
+<tr>
+  <td>is_new</td>
+  <td>1</td>
+</tr>
+</table>
+
+
+<p>Vehicle Galary</p>
+<table>
+<tr>
+  <td>http://localhost/yii2/runmile1/storage/web/vehicle/</td>
+</tr>
+</table>
+
+<p>Vehicle Contact Detail</p>
+<table>
+<tr>
+  <td>company_name</td>
+  <td>company_name</td>
+</tr>
+
+<tr>
+  <td>firstname</td>
+  <td>firstname</td>
+</tr>
+
+<tr>
+  <td>lastname</td>
+  <td>lastname</td>
+</tr>
+<tr>
+  <td>email</td>
+  <td>sfdsf@gmail.com</td>
+</tr>
+<tr>
+  <td>mobile</td>
+  <td>mobile</td>
+</tr>
+</table>
+
+    </body>
+</html>
+
+
+--_=_swift_v4_1471588752_7ee3d26908a439a2bda42e554bd2b2b3_=_--
