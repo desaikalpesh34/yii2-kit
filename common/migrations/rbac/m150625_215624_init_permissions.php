@@ -7,19 +7,44 @@ class m150625_215624_init_permissions extends Migration
 {
     public function up()
     {
+        //get all role
         $sub_admin = $this->auth->getRole(\common\models\User::ROLE_SUB_ADMIN);
+
+        $user = $this->auth->getRole(\common\models\User::ROLE_USER);
+        $vendor = $this->auth->getRole(\common\models\User::ROLE_VENDOR);
 
         $admin = $this->auth->getRole(\common\models\User::ROLE_ADMINISTRATOR);
 
+        //define and assign  permission 
         $loginToBackend = $this->auth->createPermission('loginToBackend');
         $this->auth->add($loginToBackend);
         $this->auth->addChild($sub_admin, $loginToBackend);
         $this->auth->addChild($admin, $loginToBackend);
 
+
+        
+        //manage user permission
+        $user_permission = $this->auth->createPermission('userPermission');
+         $this->auth->add($user_permission);
+         $this->auth->addChild($user, $user_permission);
+        
+        //manage vendor Permission
+        $vendor_permission = $this->auth->createPermission('vendorPermission');
+        $this->auth->add($vendor_permission);
+        $this->auth->addChild($vendor, $vendor_permission);
+
+        //manage admin permission
         $admin_permission = $this->auth->createPermission('adminPermission');
         $this->auth->add($admin_permission);
         $this->auth->addChild($admin, $admin_permission);
 
+         //user settings and default permission
+        $user_default_permission = $this->auth->createPermission('/user/*');
+        $this->auth->add($user_default_permission);
+        $this->auth->addChild($user_permission, $user_default_permission);
+        $this->auth->addChild($vendor_permission, $user_default_permission);
+
+        //manage sub-admin permission
         $alladminpemissin = $this->auth->createPermission('/*');
         $this->auth->add($alladminpemissin);
         $this->auth->addChild($admin_permission, $alladminpemissin);
