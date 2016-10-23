@@ -4,6 +4,7 @@ use common\grid\EnumColumn;
 use common\models\User;
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\search\UserSearch */
@@ -37,6 +38,21 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'status',
                 'enum' => User::statuses(),
                 'filter' => User::statuses()
+            ],
+            [
+              'attribute'=>'user_role',
+              'value'=>function($model){ 
+                $myrole='';
+                $allrole = \Yii::$app->authManager->getRolesByUser($model->id);
+                foreach ($allrole as $key => $value) 
+                {
+                    $myrole .= $key.', ';
+                }
+                return rtrim($myrole, ', ');
+              },
+              'filter'=>ArrayHelper::getColumn(
+                    Yii::$app->authManager->getRoles(),
+                    'name'),
             ],
             'created_at:datetime',
             'logged_at:datetime',

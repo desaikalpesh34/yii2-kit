@@ -15,11 +15,12 @@ class UserSearch extends User
     /**
      * @inheritdoc
      */
+    public $user_role;
     public function rules()
     {
         return [
             [['id', 'status', 'created_at', 'updated_at', 'logged_at'], 'integer'],
-            [['username', 'auth_key', 'password_hash', 'email'], 'safe'],
+            [['username', 'auth_key', 'password_hash', 'email','user_role'], 'safe'],
         ];
     }
 
@@ -46,6 +47,12 @@ class UserSearch extends User
 
         if (!($this->load($params) && $this->validate())) {
             return $dataProvider;
+        }
+
+        if($this->user_role)
+        {
+            $query->join('LEFT JOIN','rbac_auth_assignment','rbac_auth_assignment.user_id = id')
+            ->andFilterWhere(['rbac_auth_assignment.item_name' => $this->user_role]);
         }
 
         $query->andFilterWhere([

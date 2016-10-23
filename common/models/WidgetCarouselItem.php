@@ -121,6 +121,7 @@ class WidgetCarouselItem extends ActiveRecord
      */
     public function getImageUrl()
     {
-        return rtrim($this->base_url, '/') . '/' . ltrim($this->path, '/');
+        //return rtrim($this->base_url, '/') . '/' . ltrim($this->path, '/');
+        return Yii::getAlias('@storageUrl/source/'.$this->path);
     }
 }

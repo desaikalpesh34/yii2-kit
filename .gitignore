@@ -1,3 +1,6 @@
+.env
+/
+vhost.conf
 /vendor
 /api/runtime
 /backend/runtime
