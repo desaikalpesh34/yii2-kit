@@ -19,7 +19,7 @@ return [
     ],
     'components' => [
         'user'       => [
-            'identityClass'   => 'common\models\User',
+            'identityClass'   => 'api\modules\v1\models\ApiUserIdentity',
             'enableAutoLogin' => false,
             'loginUrl' =>'',
             'enableSession' => false,
@@ -33,6 +33,14 @@ return [
                 'application/json' => 'yii\web\JsonParser',
             ]
         ],
+        'response' => [
+            'on beforeSend' => function ($event) 
+            {
+                 $response = $event->sender;
+                 return $response;
+            }
+        ],
+
         'log'        => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets'    => [
@@ -49,6 +57,7 @@ return [
             'rules'               => require('url_rules.php'),
         ]
     ],
+
     
     'params'     => $params,
 ];

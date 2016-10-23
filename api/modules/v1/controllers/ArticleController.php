@@ -1,8 +1,8 @@
 <?php
-namespace frontend\modules\api\v1\controllers;
+namespace api\modules\v1\controllers;
 
 use Yii;
-use frontend\modules\api\v1\resources\Article;
+use common\models\Article;
 use yii\data\ActiveDataProvider;
 use yii\rest\ActiveController;
 use yii\web\ForbiddenHttpException;

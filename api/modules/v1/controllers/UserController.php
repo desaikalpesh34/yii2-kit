@@ -1,30 +1,31 @@
 <?php
 
-namespace frontend\modules\api\v1\controllers;
+namespace api\modules\v1\controllers;
 
 use common\models\User;
-use frontend\modules\api\v1\resources\User as UserResource;
 use yii\filters\auth\CompositeAuth;
 use yii\filters\auth\HttpBasicAuth;
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\auth\QueryParamAuth;
-use yii\rest\ActiveController;
+use yii\rest\Controller;
 use yii\web\NotFoundHttpException;
+use api\modules\v1\models\search\UserSearch;
+use Yii;
 
 /**
  * @author Eugene Terentev <eugene@terentev.net>
  */
-class UserController extends ActiveController
+class UserController extends Controller
 {
     /**
      * @var string
      */
-    public $modelClass = 'frontend\modules\api\v1\resources\User';
+    //public $modelClass = 'frontend\modules\api\v1\resources\User';
 
     /**
      * @return array
      */
-    public function behaviors()
+    /*public function behaviors()
     {
         $behaviors = parent::behaviors();
 
@@ -46,38 +47,30 @@ class UserController extends ActiveController
         ];
 
         return $behaviors;
-    }
+    }*/
 
     /**
      * @inheritdoc
      */
-    public function actions()
-    {
-        return [
-            'index' => [
-                'class' => 'yii\rest\IndexAction',
-                'modelClass' => $this->modelClass
-            ],
-            'view' => [
-                'class' => 'yii\rest\ViewAction',
-                'modelClass' => $this->modelClass,
-                'findModel' => [$this, 'findModel']
-            ],
-            'options' => [
-                'class' => 'yii\rest\OptionsAction'
-            ]
-        ];
-    }
+    
 
     /**
      * @param $id
      * @return null|static
      * @throws NotFoundHttpException
      */
+
+    public function actionIndex()
+    {
+        $searchModel = new UserSearch();
+        return $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+    }
+
     public function findModel($id)
     {
-        $model = UserResource::findOne($id);
-        if (!$model) {
+        $model = User::findOne($id);
+        if (!$model) 
+        {
             throw new NotFoundHttpException;
         }
         return $model;
