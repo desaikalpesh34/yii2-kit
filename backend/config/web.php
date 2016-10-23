@@ -50,7 +50,7 @@ $config = [
             'sign-in/avatar-delete',
             'sign-in/logout',
             'site/error',
-            'debug/default'
+            'debug/*'
         ]
     ],
     'modules'=>[
