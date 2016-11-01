@@ -29,7 +29,8 @@ class m140703_123000_user extends Migration
         ], $tableOptions);
 
         $this->createTable('{{%user_profile}}', [
-            'user_id' => $this->primaryKey(),
+            'id' => $this->primaryKey(),
+            'user_id' => $this->integer(),
             'firstname' => $this->string(),
             'middlename' => $this->string(),
             'lastname' => $this->string(),

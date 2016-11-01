@@ -10,26 +10,6 @@ use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
 use yii\web\IdentityInterface;
 
-/**
- * User model
- *
- * @property integer $id
- * @property string $username
- * @property string $password_hash
- * @property string $email
- * @property string $auth_key
- * @property string $access_token
- * @property string $oauth_client
- * @property string $oauth_client_user_id
- * @property string $publicIdentity
- * @property integer $status
- * @property integer $created_at
- * @property integer $updated_at
- * @property integer $logged_at
- * @property string $password write-only password
- *
- * @property \common\models\UserProfile $userProfile
- */
 class User extends ActiveRecord implements IdentityInterface
 {
     const STATUS_NOT_ACTIVE = 1;
@@ -224,20 +204,13 @@ class User extends ActiveRecord implements IdentityInterface
         return Yii::$app->getSecurity()->validatePassword($password, $this->password_hash);
     }
 
-    /**
-     * Generates password hash from password and sets it to the model
-     *
-     * @param string $password
-     */
+    
     public function setPassword($password)
     {
         $this->password_hash = Yii::$app->getSecurity()->generatePasswordHash($password);
     }
 
-    /**
-     * Returns user statuses list
-     * @return array|mixed
-     */
+    
     public static function statuses()
     {
         return [
@@ -247,10 +220,6 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
-    /**
-     * Creates user profile and application event
-     * @param array $profileData
-     */
     public function afterSignup(array $profileData = [])
     {
         $this->refresh();
@@ -263,6 +232,29 @@ class User extends ActiveRecord implements IdentityInterface
                 'created_at' => $this->created_at
             ]
         ]));
+        
+        //add history
+         $his_data = ['model'=>User::className(),'id'=>$this->getId(),'old'=>$this->getOldAttributes(),'new'=>$this->getAttributes()];
+
+        Yii::$app->commandBus->handle(new \common\commands\UserHistoryCommand([
+            'user_id' => $this->id,
+            'title' => 'registration',
+            'description' => 'registration in the system',
+            'level' => 0,
+            'class' => User::className(),
+            'status' => 1,
+            'data' => $his_data,
+        ]));
+
+        //add notification
+        Yii::$app->commandBus->handle(new \common\commands\UserNotificationCommand([
+            'user_id' => $this->id,
+            'title' => 'registration',
+            'description' => 'registration in the system',
+            'is_read'=>0,
+            'status' => 1,
+        ]));
+
         $profile = new UserProfile();
         $profile->locale = Yii::$app->language;
         $profile->load($profileData, '');
