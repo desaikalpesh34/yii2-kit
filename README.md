@@ -4,10 +4,10 @@ This is Yii2 start application template.
 
 ## TABLE OF CONTENTS
 - [Demo](#demo)
-- [Features](#https://github.com/trntv/yii2-starter-kit#features)
-- [Api](#api_demo)
-- [RBAC](#rbac_demo)
-- [Command Bus](#Command_Bus)
+- [Features](https://github.com/trntv/yii2-starter-kit#features)
+- [Api](#Api)
+- [RBAC](#RBAC)
+- [Command Bus](#Command Bus)
 - [Installation](docs/installation.md)
     - [Manual installation](docs/installation.md#manual-installation)
     - [Docker installation](docs/installation.md#docker-installation)
@@ -17,7 +17,7 @@ This is Yii2 start application template.
 - [Testing](docs/testing.md)
 - [FAQ](docs/faq.md)
 - [How to contribute?](#how-to-contribute)
-- [Donations](#donations)
+- [Donations](#Donations)
 - [Have any questions](#have-any-questions)
 
 ##DEMO
@@ -58,7 +58,7 @@ Password: admin123
 Login: vendor
 Password: admin123
 ```
-##api_demo
+##Api
 Frontend:
 http://kalpeshdesai.in/yii/kit/api/web/v1
 Ready-to-go RESTful API App pre configrable
@@ -66,14 +66,14 @@ Ready-to-go RESTful API App pre configrable
 here is demo api for user listing
 http://kalpeshdesai.in/yii/kit/api/web/v1/user
 
-##rbac_demo
+##RBAC
 pre configured yii-admin module for rbac manager.
 All the controller and action is managed from backend.
 here you can manage role and permission.
 http://kalpeshdesai.in/yii/kit/backend/web/admin
 for more detail visit (https://github.com/mdmsoft/yii2-admin/blob/master/docs/guide/configuration.md)
 
-##Command_Bus
+##Command Bus
 - [What is command bus?](http://shawnmc.cool/command-bus)
 
 In Starter Kit Command Bus pattern is implemented with [tactician](https://github.com/thephpleague/tactician) package and 
@@ -89,7 +89,7 @@ Yii::$app->commandBus->handle($sendEmailCommand);
 ##how-to-contribute
 create pull request or mention issue.
 
-##donations
+##Donations
 pay with [paypal](https://www.paypal.me/KalpeshDesai)
 ##have-any-questions
 reach @desaikalpesh34@gmail.com
