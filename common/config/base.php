@@ -58,7 +58,7 @@ $config = [
                 'class' => 'Swift_SmtpTransport',
                 'host' => env('SMTP_HOST'),
                 'username'=>env('SMTP_USERNAME'),
-                'password' => 'SMTP_PASSWORD',
+                'password' => env('SMTP_PASSWORD'),
                 'port' => env('SMTP_PORT'),
                 'encryption' => env('SMTP_ENCRYPTION'),
              ],
