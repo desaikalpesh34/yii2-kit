@@ -90,7 +90,7 @@ Yii::$app->commandBus->handle($sendEmailCommand);
 create pull request or mention issue.
 
 ##donations
-pay with paypal https://www.paypal.me/KalpeshDesai
+pay with [paypal][https://www.paypal.me/KalpeshDesai] 
 ##have-any-questions
 reach @desaikalpesh34@gmail.com
 
