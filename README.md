@@ -12,7 +12,7 @@ This is Yii2 start application template.
     - [Manual installation](docs/installation.md#manual-installation)
     - [Docker installation](docs/installation.md#docker-installation)
     - [Vagrant installation](docs/installation.md#vagrant-installation)
-- [Application components](#application-components)
+- [Application components](https://github.com/trntv/yii2-starter-kit#application-components)
 - [Console commands](docs/console.md)
 - [Testing](docs/testing.md)
 - [FAQ](docs/faq.md)
@@ -86,4 +86,12 @@ To execute command run
 $sendEmailCommand = new SendEmailCommand(['to' => 'user@example.org', 'body' => 'Hello User!']);
 Yii::$app->commandBus->handle($sendEmailCommand);
 ```
+##how-to-contribute
+create pull request or mention issue.
+
+##donations
+pay with paypal https://www.paypal.me/KalpeshDesai
+##have-any-questions
+reach @desaikalpesh34@gmail.com
+
 Good luck & Happy codding!!
