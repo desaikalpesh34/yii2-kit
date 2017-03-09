@@ -5,9 +5,9 @@ This is Yii2 start application template.
 ## TABLE OF CONTENTS
 - [Demo](#demo)
 - [Features](#https://github.com/trntv/yii2-starter-kit#features)
-- [Api](#API)
-- [RBAC](#RBAC)
-- Command Bus(#Command Bus)
+- [Api](#api_demo)
+- [RBAC](#rbac_demo)
+- [Command Bus](#Command_Bus)
 - [Installation](docs/installation.md)
     - [Manual installation](docs/installation.md#manual-installation)
     - [Docker installation](docs/installation.md#docker-installation)
@@ -58,7 +58,7 @@ Password: admin123
 Login: vendor
 Password: admin123
 ```
-##API
+##api_demo
 Frontend:
 http://kalpeshdesai.in/yii/kit/api/web/v1
 Ready-to-go RESTful API App pre configrable
@@ -66,14 +66,14 @@ Ready-to-go RESTful API App pre configrable
 here is demo api for user listing
 http://kalpeshdesai.in/yii/kit/api/web/v1/user
 
-##RBAC
+##rbac_demo
 pre configured yii-admin module for rbac manager.
 All the controller and action is managed from backend.
 here you can manage role and permission.
 http://kalpeshdesai.in/yii/kit/backend/web/admin
 for more detail visit (https://github.com/mdmsoft/yii2-admin/blob/master/docs/guide/configuration.md)
 
-### Command Bus
+##Command_Bus
 - [What is command bus?](http://shawnmc.cool/command-bus)
 
 In Starter Kit Command Bus pattern is implemented with [tactician](https://github.com/thephpleague/tactician) package and 
@@ -90,7 +90,7 @@ Yii::$app->commandBus->handle($sendEmailCommand);
 create pull request or mention issue.
 
 ##donations
-pay with [paypal][https://www.paypal.me/KalpeshDesai] 
+pay with [paypal](https://www.paypal.me/KalpeshDesai)
 ##have-any-questions
 reach @desaikalpesh34@gmail.com
 
