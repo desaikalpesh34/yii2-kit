@@ -24,6 +24,7 @@ if (YII_ENV_DEV)
 	Yii::setAlias('@frontendUrl', env('LOCAL_FRONTEND_URL'));
 	Yii::setAlias('@backendUrl', env('LOCAL_BACKEND_URL'));
 	Yii::setAlias('@storageUrl', env('LOCAL_STORAGE_URL'));
+	Yii::setAlias('@apiUrl', env('LOCAL_API_URL'));
 }
 
 if (YII_ENV_PROD) 
@@ -31,6 +32,7 @@ if (YII_ENV_PROD)
 	Yii::setAlias('@frontendUrl', env('LIVE_FRONTEND_URL'));
 	Yii::setAlias('@backendUrl', env('LIVE_BACKEND_URL'));
 	Yii::setAlias('@storageUrl', env('LIVE_STORAGE_URL'));
+	Yii::setAlias('@apiUrl', env('LIVE_API_URL'));
 }
 
 
