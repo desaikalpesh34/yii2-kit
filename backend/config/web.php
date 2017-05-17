@@ -50,7 +50,8 @@ $config = [
             'sign-in/avatar-delete',
             'sign-in/logout',
             'site/error',
-            'debug/*'
+            'debug/*',
+            'file-manager-elfinder/*'
         ]
     ],
     'modules'=>[

@@ -72,6 +72,7 @@ $config = [
             'user/sign-in/request-password-reset',
             'user/sign-in/reset-password',
             'user/sign-in/logout',
+            'file-manager-elfinder/*'
             //add more action here as your requirement
         ],
     ],

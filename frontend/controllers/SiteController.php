@@ -1,60 +1,140 @@
 <?php
+
 namespace frontend\controllers;
 
-use Yii;
 use frontend\models\ContactForm;
+use frontend\models\ContactUsForm;
+use frontend\models\LoginForm;
+use Yii;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
+use yii\helpers\Url;
 use yii\web\Controller;
 
 /**
- * Site controller
+ * {@inheritDoc}
  */
 class SiteController extends Controller
 {
     /**
      * @inheritdoc
      */
-    public function actions()
+    public function behaviors()
     {
         return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction'
+            'access' => [
+                'class' => AccessControl::className(),
+                'only'  => ['logout'],
+                'rules' => [
+                    [
+                        'actions' => ['logout'],
+                        'allow'   => true,
+                        'roles'   => ['@'],
+                    ],
+                ],
             ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null
+            'verbs'  => [
+                'class'   => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
             ],
-            'set-locale'=>[
-                'class'=>'common\actions\SetLocaleAction',
-                'locales'=>array_keys(Yii::$app->params['availableLocales'])
-            ]
         ];
     }
 
-    public function actionIndex()
+
+    /**
+     * @inheritdoc
+     */
+    public function actions()
     {
-        return $this->render('index');
+        return [
+            'error'   => [
+                'class' => 'yii\web\ErrorAction',
+            ],
+            'captcha' => [
+                'class'           => 'yii\captcha\CaptchaAction',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+            ],
+        ];
     }
 
-    public function actionContact()
+
+    /**
+     * Displays homepage.
+     *
+     * @return string
+     * @throws \yii\base\InvalidConfigException
+     */
+    public function actionIndex()
     {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post())) {
-            if ($model->contact(Yii::$app->params['adminEmail'])) {
-                Yii::$app->getSession()->setFlash('alert', [
-                    'body'=>Yii::t('frontend', 'Thank you for contacting us. We will respond to you as soon as possible.'),
-                    'options'=>['class'=>'alert-success']
-                ]);
-                return $this->refresh();
-            } else {
-                Yii::$app->getSession()->setFlash('alert', [
-                    'body'=>\Yii::t('frontend', 'There was an error sending email.'),
-                    'options'=>['class'=>'alert-danger']
-                ]);
-            }
+
+
+        $contactUsModel = new ContactUsForm();
+
+        if ($contactUsModel->load(Yii::$app->request->post()) && $contactUsModel->contact('denis4yk19@gmail.com',
+                $contactUsModel)
+        ) {
+            Yii::$app->session->setFlash('contactFormSubmitted');
+
+            return $this->refresh();
         }
 
-        return $this->render('contact', [
-            'model' => $model
-        ]);
+        return $this->render('index', ['contactUsModel' => $contactUsModel]);
+    }
+
+
+    /**
+     * Displays about page.
+     *
+     * @return string
+     */
+    public function actionAbout()
+    {
+        return $this->render('about');
+    }
+
+
+    /**
+     * Displays our services page
+     *
+     * @return string
+     */
+    public function actionServices()
+    {
+        return $this->render('our-services');
+    }
+
+
+    /**
+     * Displays our terms and conditions page
+     *
+     * @return string
+     */
+    public function actionTermsAndConditions()
+    {
+        return $this->render('terms-and-conditions');
+    }
+
+    /**
+     * Displays our privacy policy page
+     *
+     * @return string
+     */
+    public function actionPrivacyPolicy()
+    {
+        return $this->render('privacy-policy');
+    }
+
+
+    /**
+     * @param string $language
+     *
+     * @throws \yii\base\InvalidConfigException
+     */
+    public function actionSetLanguage($language)
+    {
+        \Yii::$app->language = $language;
+        $this->goBack(Url::home());
     }
 }

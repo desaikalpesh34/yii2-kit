@@ -1,6 +1,6 @@
 <?php
 $config = [
-    'name'=>'Yii2 Starter Kit',
+    'name'=>'USA Immigrations',
     'vendorPath'=>dirname(dirname(__DIR__)).'/vendor',
     'extensions' => require(__DIR__ . '/../../vendor/yiisoft/extensions.php'),
     'sourceLanguage'=>'en-US',
@@ -169,6 +169,54 @@ $config = [
             'uk-UA'=>'Українська (Україна)',
             'es' => 'Español',
             'zh-CN' => '简体中文',
+        ],
+        'adminEmail'             => 'Customerservice@usaimmigrations.org',
+        /**
+         * Country flags prefix
+         */
+        'icon-framework'         => 'fi',
+        /**
+         * Contact phone
+         */
+        'contactPhone'           => '+1-310-436-5492',
+        /**
+         * Contact email
+         */
+        'contactEmail'           => 'customerservice@usaimmigrations.org',
+        /**
+         * Physical contact address
+         */
+        'contactAddress'         => '124 S. Maple Dr. Suite B, Beverly Hills CA, 90212.',
+        /**
+         * Paypal Client ID
+         */
+        //sandbox
+        //'paypalClientId'         => '',
+        //live
+        'paypalClientId'         => env('PARAMS_PAYPAL_CLIENT_ID', 'AYptN6jDatgK8kDfxY_RuqrQpEdcZaEZeVqEq_HtfaR3XL2GwxnszOHDgtGa5lu7Bq-d1Vk3KPI7liqU'),
+        /**
+         * Paypal Secret
+         */
+        //sandbox
+        //'paypalSecret'           => '',
+        //live
+        'paypalSecret'           => env('PARAMS_PAYPAL_SECRET', 'EJ3_oWHSWSbdnWKlk26Elrx4HAXDr44Xa_4gBSJ03IOXtAHCHhu2Bm5xuv3PkqKpXgc_CeEsWeQ1UrXk'),
+        /**
+         * Paypal API context config
+         */
+        'paypalApiContextConfig' => [
+            'mode'           => env('PARAMS_PAYPAL_API_CONTEXT_CONFIG_MODE', 'sandbox'),
+            //        'mode'           => 'live',
+            'log.LogEnabled' => env('PARAMS_PAYPAL_API_CONTEXT_CONFIG_LOG_ENABLED', true),
+            'log.LogLevel' => env('PARAMS_PAYPAL_API_CONTEXT_CONFIG_LOG_LEVEL', 'FINE'),
+            'log.FileName'   => '../yii-2-core/runtime/paypal/PayPal.log',
+        ],
+        /**
+         * Payment plans
+         */
+        'paymentPlan'            => [
+            'single' => [ 'price' => '0.01', 'title' => 'Single plan' ],
+            'family' => [ 'price' => '0.02', 'title' => 'Family plan' ],
         ],
     ],
 ];

@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.contblock {
+  min-height: calc(100vh - 180px);
+  padding-bottom: 20px;
+}
+
+a.unfinished {
+  color: #FF7701;
+}
+
+h4 {
+font-size: 1.191rem;
+}
+
+footer {
+  height: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  color: #888;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.photo {
+  list-style-type: disc;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+ul.spec {
+  list-style-type: circle;
+  padding-left: 30px;
+}
+
+.photo li {
+  padding-top: 3px;
+}
+
+li {
+  /* margin-bottom: 5px; */
+}
+
+.htip {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar {
+  margin-bottom: 20px;
+}
+
+/* header */
+.header-row {
+  border-bottom: 1px solid #ccc;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow:    0px 3px 5px 0px rgba(50, 50, 50, 0.2);
+  box-shadow:         0px 3px 5px 0px rgba(50, 50, 50, 0.2);
+}
+
+.header {
+  margin: 10px;
+  font-size: 14px;
+}
+
+.logout {
+  margin-top: 19px;
+}
+
+.loggedin {
+  padding-right: 15px;
+}
+
+.contblock {
+  margin-top: 20px;
+}
+
+.home {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.reg {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.line {
+  height: 15px;
+  border-left: 2px solid #ccc;
+  margin-left: 5px;
+}
+
+.incomplete {
+  color: #f00;
+}
+
+.complete {
+  color: #16AB39;
+}
+
+.personal li {
+  padding-bottom: 4px;
+}
+
+#chosen {
+  color: #777777;
+  font-weight: bold;
+}
+
+.crd {
+  margin-top: 40px;
+}
+
+.wrn {
+  margin-top: 20px;
+}
+
+.phototool {
+  color: #fff;
+}
+
+.phototool:hover {
+  color: #fff;
+}
+
+.toddler {
+  margin: 0;
+  margin-top: -30px;
+  margin-bottom: -20px;
+}
+
+.modalcont, .modalstartup {
+  height: 580px;
+  width: 300px;
+}
+
+/* countries spacing */
+.cf-01 {
+  margin-top: 10px;
+}
+
+.yourcountry .contbtn {
+  margin-top: 10px;
+}
+
+.ui .editbtn {
+  margin-left: 10px;
+}
+
+/* js stuff */
+
+.inactive {
+  display: none;
+}
+
+.spec {
+  margin-top: 4px;
+}
+
+.dim-text {
+  color: #ccc;
+}
+
+.photo {
+  width: 300px;
+  padding-bottom: 20px;
+}
+
+#edit_eligibility {
+  margin-top: 14px;
+}
