@@ -1,0 +1,1 @@
+ALTER TABLE `user_profile` ADD `time_zone_id` INT(11) NOT NULL AFTER `gender`, ADD `country_id` INT(11) NOT NULL AFTER `time_zone_id`, ADD `state_id` INT(11) NOT NULL AFTER `country_id`;

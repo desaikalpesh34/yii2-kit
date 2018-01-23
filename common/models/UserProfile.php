@@ -68,7 +68,7 @@ class UserProfile extends ActiveRecord
             [['firstname', 'middlename', 'lastname', 'avatar_path', 'avatar_base_url'], 'string', 'max' => 255],
             ['locale', 'default', 'value' => Yii::$app->language],
             ['locale', 'in', 'range' => array_keys(Yii::$app->params['availableLocales'])],
-            ['picture', 'safe']
+            ['picture','time_zone_id','country_id','state_id', 'safe']
         ];
     }
 
@@ -84,7 +84,10 @@ class UserProfile extends ActiveRecord
             'lastname' => Yii::t('common', 'Lastname'),
             'locale' => Yii::t('common', 'Locale'),
             'picture' => Yii::t('common', 'Picture'),
-            'gender' => Yii::t('common', 'Gender'),
+            'gender' => Yii::t('common', 'Gender'), 
+            'time_zone_id' => Yii::t('common', 'Time Zone'),
+            'country_id' => Yii::t('common', 'Country'),
+            'state_id' => Yii::t('common', 'State'),
         ];
     }
 
