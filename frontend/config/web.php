@@ -43,7 +43,9 @@ $config = [
             }
         ],
         'request' => [
-            'cookieValidationKey' => env('FRONTEND_COOKIE_VALIDATION_KEY')
+            'cookieValidationKey' => env('FRONTEND_COOKIE_VALIDATION_KEY'),
+            'class' => 'common\components\mine\Request',
+            'web'=> '/frontend/web'
         ],
         'user' => [
             'class'=>'yii\web\User',

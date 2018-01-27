@@ -24,7 +24,10 @@ $config = [
         ],
         'request' => [
             'enableCsrfValidation' => false,
-            'cookieValidationKey' => env('BACKEND_COOKIE_VALIDATION_KEY')
+            'cookieValidationKey' => env('BACKEND_COOKIE_VALIDATION_KEY'),
+            'class' => 'common\components\mine\Request',
+            'web'=> '/backend/web',
+            'adminUrl' => '/admin'
         ],
         'user' => [
             'class'=>'yii\web\User',
