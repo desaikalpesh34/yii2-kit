@@ -1,14 +1,11 @@
 <?php
-
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-
 /* @var $this \yii\web\View */
 /* @var $content string */
-
 $this->beginContent('@frontend/views/layouts/_clear.php')
 ?>
-<?php /*?><div class="wrap">
+<div class="wrap">
     <?php
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
@@ -69,6 +66,5 @@ $this->beginContent('@frontend/views/layouts/_clear.php')
         <p class="pull-left">&copy; My Company <?php echo date('Y') ?></p>
         <p class="pull-right"><?php echo Yii::powered() ?></p>
     </div>
-</footer><?php */ ?>
- <?php echo $content ?>
+</footer>
 <?php $this->endContent() ?>

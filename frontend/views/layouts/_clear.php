@@ -1,11 +1,8 @@
 <?php
 use yii\helpers\Html;
-use frontend\assets\AppAsset;
 /* @var $this \yii\web\View */
 /* @var $content string */
-
-//\frontend\assets\FrontendAsset::register($this);
-AppAsset::register($this);
+\frontend\assets\FrontendAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -19,7 +16,7 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-    <?php echo $content; ?>
+    <?php echo $content ?>
 <?php $this->endBody() ?>
 </body>
 </html>
