@@ -19,9 +19,9 @@ class ApiManager extends Component
        $this->AppPropery();
        if(!in_array(Yii::$app->controller->id.'/'.Yii::$app->controller->action->id,$this->exept))
        {
-           if(Yii::$app->request->headers->has('teckskyauth'))
+           if(Yii::$app->request->headers->has('my_kit_auth'))
            {
-              $model = User::findIdentityByAccessToken(Yii::$app->request->headers->get('teckskyauth'));
+              $model = User::findIdentityByAccessToken(Yii::$app->request->headers->get('my_kit_auth'));
               if($model)
               {
                 $this->status=true;

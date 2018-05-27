@@ -4,29 +4,28 @@
   "keywords": [
     "yii2",
     "framework",
-    "start",
+    "kit",
     "cms",
-    "application template",
+    "starter",
     "yii2 advanced"
   ],
   "authors": [
     {
-      "name": "Eugene Terentev",
-      "email": "eugene@terentev.net",
-      "homepage": "http://terentev.net",
+      "name": "Kalpesh Desai",
+      "email": "desaikalpesh34@gmail.com",
+      "homepage": "https://github.com/desaikalpesh34/yii2-kit",
       "role": "Developer"
     }
   ],
   "type": "project",
   "license": "BSD-3-Clause",
   "support": {
-    "issues": "https://github.com/trntv/yii2-starter-kit/issues?state=open",
-    "source": "https://github.com/trntv/yii2-starter-kit"
+    "issues": "https://github.com/desaikalpesh34/yii2-kit/issues",
+    "source": "https://github.com/desaikalpesh34/yii2-kit"
   },
   "require": {
-    "php": ">=5.5.0",
-    "ext-intl": "*",
-    "yiisoft/yii2": "^2.0.6",
+    "php": ">=7.1.0",
+    "yiisoft/yii2": "2.0.15.1",
     "yiisoft/yii2-bootstrap": "^2.0.0",
     "yiisoft/yii2-swiftmailer": "^2.0.0",
     "yiisoft/yii2-authclient": "^2.0.0",
@@ -49,7 +48,6 @@
     "bower-asset/flot": "^0.8",
     "symfony/process": "^3.0",
     "mdmsoft/yii2-admin": "~2.0",
-
     "3ch3r46/yii2-bootui": "dev-master",
     "udokmeci/yii2-phone-validator": "1.0.1",
     "drsdre/yii2-wizardwidget": "1.2.1",
@@ -59,13 +57,11 @@
     "kartik-v/yii2-checkbox-x": "1.0.0.x-dev",
     "kartik-v/yii2-widget-growl": "1.1.0.x-dev",
     "kartik-v/yii2-widget-datepicker": "v1.4.2",
-    "2amigos/yii2-semantic-ui": "dev-master",
     "kartik-v/yii2-icons": "v1.4.1",
     "kartik-v/yii2-widget-select2": "v2.0.8",
     "kartik-v/yii2-datecontrol": "v1.9.4",
     "nesbot/carbon": "1.21.0",
     "kartik-v/yii2-dropdown-x": "v1.2.0",
-    "zelenin/yii2-semantic-ui": "2.0.9",
     "yii2mod/yii2-helpers": "1.3",
     "skeeks/yii2-widget-simpleajaxuploader": "1.1.0",
     "yii-dream-team/yii2-upload-behavior": "1.1.1",
@@ -73,12 +69,7 @@
     "2amigos/yii2-bootstrap-form-helpers-library": "*", 
     "codemix/yii2-localeurls": "1.4.5",
     "anahkiasen/underscore-php": "2.0.0",
-    "rmrevin/yii2-fontawesome": "2.17.0",
-    "paypal/rest-api-sdk-php": "1.11.0",
-    "bower-asset/jquery.are-you-sure": "1.9.0",
-    "bower-asset/jQuery.stickyFooter": "*",
-    "tod/utils": "0.1.*"
-    
+    "rmrevin/yii2-fontawesome": "2.17.0"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "^2.0.0",
@@ -88,9 +79,6 @@
     "codeception/codeception": "^2.0",
     "codeception/specify": "^0.4.3",
     "codeception/verify": "^0.3.0"
-  },
-  "suggest": {
-    "trntv/yii2-debug-xhprof": "dev-master@dev"
   },
   "config": {
     "process-timeout": 1800

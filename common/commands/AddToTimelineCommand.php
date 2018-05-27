@@ -3,14 +3,14 @@
 namespace common\commands;
 
 use Yii;
-use yii\base\Object;
+use yii\base\BaseObject;
 use common\models\TimelineEvent;
 use trntv\bus\interfaces\SelfHandlingCommand;
 
 /**
  * @author Eugene Terentev <eugene@terentev.net>
  */
-class AddToTimelineCommand extends Object implements SelfHandlingCommand
+class AddToTimelineCommand extends BaseObject implements SelfHandlingCommand
 {
     /**
      * @var string

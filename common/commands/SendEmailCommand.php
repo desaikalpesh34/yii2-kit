@@ -2,14 +2,14 @@
 
 namespace common\commands;
 
-use yii\base\Object;
+use yii\base\BaseObject;
 use yii\swiftmailer\Message;
 use trntv\bus\interfaces\SelfHandlingCommand;
 
 /**
  * @author Eugene Terentev <eugene@terentev.net>
  */
-class SendEmailCommand extends Object implements SelfHandlingCommand
+class SendEmailCommand extends BaseObject implements SelfHandlingCommand
 {
     /**
      * @var mixed

@@ -3,11 +3,11 @@
 namespace common\commands;
 
 use Yii;
-use yii\base\Object;
+use yii\base\BaseObject;
 use common\models\UserHistory;
 use trntv\bus\interfaces\SelfHandlingCommand;
 
-class UserHistoryCommand extends Object implements SelfHandlingCommand
+class UserHistoryCommand extends BaseObject implements SelfHandlingCommand
 {
     public $user_id;
     public $title;

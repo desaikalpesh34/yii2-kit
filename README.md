@@ -4,19 +4,9 @@ This is Yii2 start application template.
 
 ## TABLE OF CONTENTS
 - [Demo](#demo)
-- [Features](https://github.com/trntv/yii2-starter-kit#features)
 - [Api](#Api)
 - [RBAC](#RBAC)
-- [Command Bus](#Command Bus)
-- [Installation](docs/installation.md)
-    - [Manual installation](docs/installation.md#manual-installation)
-    - [Docker installation](docs/installation.md#docker-installation)
-    - [Vagrant installation](docs/installation.md#vagrant-installation)
-- [Application components](https://github.com/trntv/yii2-starter-kit#application-components)
-- [Console commands](docs/console.md)
-- [Testing](docs/testing.md)
-- [FAQ](docs/faq.md)
-- [How to contribute?](#how-to-contribute)
+- [Installation](#Installation)
 - [Donations](#Donations)
 - [Have any questions](#have-any-questions)
 
@@ -73,21 +63,15 @@ here you can manage role and permission.
 http://kalpeshdesai.in/yii/kit/backend/web/admin
 for more detail visit (https://github.com/mdmsoft/yii2-admin/blob/master/docs/guide/configuration.md)
 
-##Command Bus
-- [What is command bus?](http://shawnmc.cool/command-bus)
+##Installation
+1. If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
+at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 
-In Starter Kit Command Bus pattern is implemented with [tactician](https://github.com/thephpleague/tactician) package and 
-it's yii2 connector - [yii2-tactician](https://github.com/trntv/yii2-tactician)
-
-Command are stored in ``common/commands/command`` directory, handlers in ``common/commands/handler``
-
-To execute command run
-```php
-$sendEmailCommand = new SendEmailCommand(['to' => 'user@example.org', 'body' => 'Hello User!']);
-Yii::$app->commandBus->handle($sendEmailCommand);
+2. Install composer-asset-plugin needed for yii assets management
+```bash
+composer global require "fxp/composer-asset-plugin"
 ```
-##how-to-contribute
-create pull request or mention issue.
+
 
 ##Donations
 pay with [paypal](https://www.paypal.me/KalpeshDesai)
