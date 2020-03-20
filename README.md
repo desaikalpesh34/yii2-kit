@@ -5,10 +5,10 @@ This is Yii2 start application template.
 ### DEMO
 
 Frontend:
-http://kalpeshdesai.in/yii/kit/frontend/web
+http://desaikalpesh34.com/
 
 Backend:
-http://kalpeshdesai.in/yii/kit/backend/web
+http://desaikalpesh34.com/admin
 admin/admin123
 
 Local instalation
@@ -45,11 +45,11 @@ Password: admin123
 Ready-to-go RESTful API App pre configrable
  - Api BaseUrl
 	 ```
-	   http://kalpeshdesai.in/yii/kit/api/web/v1
+	   http://desaikalpesh34.com/api/web/v1
 	 ```
  - How to use
 	 ```
-	 	  http://kalpeshdesai.in/yii/kit/api/web/v1/user
+	 	  http://desaikalpesh34.com/api/web/v1/user
 	 ```
 
 
@@ -58,7 +58,7 @@ Ready-to-go RESTful API App pre configrable
 pre configured yii-admin module for rbac manager.
 All the controller and action is managed from backend.
 here you can manage role and permission.
-http://kalpeshdesai.in/yii/kit/backend/web/admin
+http://desaikalpesh34.com/admin
 for more detail visit (https://github.com/mdmsoft/yii2-admin/blob/master/docs/guide/configuration.md)
 
 ### Installation
